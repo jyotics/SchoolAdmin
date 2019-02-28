@@ -62,6 +62,25 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="user-role" class="col-md-4 control-label">User Role</label>
+
+                            <div class="col-md-6">
+                                <select class="form-control" name="user-role">
+                                <option value="2">Coach</option>
+                                <option value="3">User</option>
+                                </select>
+
+                                 @if ($errors->has('user-role'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('user-role') }}</strong>
+                                    </span>
+                                @endif
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Register
